@@ -24,13 +24,25 @@ public class BoardServiceImpl implements BoardService{
 	}
 	
 
-	public List<BoardVO> getList1(int bid){
-		log.info("getList1()..");
-		BoardVO boardvo = new BoardVO();
+	public BoardVO getList1(int bid){
+	
 		return boardMapper.getList1(bid);
 		
 		
 	}
+	
+	@Override
+	public int remove(int bid) {
+		log.info("service:remove()..");
+		return boardMapper.delete(bid);
+	}
+	
+	   @Override
+	   public void modify(BoardVO boardVO) {
+	      log.info("service:modify()..");
+	      boardMapper.update(boardVO);
+
+	   }
 
 
 }

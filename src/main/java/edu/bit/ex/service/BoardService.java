@@ -8,7 +8,9 @@ import edu.bit.ex.vo.BoardVO;
 
 public interface BoardService {
 	List<BoardVO> getList();
-	List<BoardVO> getList1(int bid);
+	BoardVO getList1(int bid);
+	int remove(int bid);
+	void modify(BoardVO boardVO);
 
 }
 

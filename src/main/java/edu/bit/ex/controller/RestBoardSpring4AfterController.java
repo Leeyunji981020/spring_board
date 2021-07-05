@@ -47,7 +47,7 @@ public class RestBoardSpring4AfterController {
 
 	@ResponseBody
 	@RequestMapping("/rest/{bid}")
-	public List<BoardVO> rest1(@PathVariable("bid") int bid){
+	public BoardVO rest1(@PathVariable("bid") int bid){
 		log.info("/rest/{bid}..");
 		
 	

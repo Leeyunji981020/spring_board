@@ -15,7 +15,9 @@ import lombok.ToString;
 @Mapper
 public interface BoardMapper {
 	List<BoardVO> getList();
-	List<BoardVO> getList1(int bid);
+	BoardVO getList1(int bid);
+	int delete(int bid);
+	void update(BoardVO boardVO);
 
 	
 	
